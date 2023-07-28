@@ -1,0 +1,611 @@
+id,text,true_amr,pred_amr
+a_pmid_2234_3622.61,"Mechanistic biomarker studies of the effects of selumetinib in human tumour xenograft models have shown that, in addition to pERK1/2 downregulation, a sustained exposure to the agent results in an increase in downstream apoptotic signalling and a decrease in cell cycle progression (<xref ref-type=""bibr"" rid=""bib6"">Davies <i>et al</i>, 2007</xref>).","(s / show-01
+:ARG0 (s2 / study-01
+:ARG1 (a / affect-01
+:ARG0 (s3 / small-molecule :name (n3 / name :op1 ""selumetinib""))
+:ARG1 (m2 / model
+:mod (x / xenograft
+:mod (t / tumor))
+:mod (h / human)))
+:mod (b / biomarker
+:mod (m / mechanistic)))
+:ARG1 (r / result-01
+:ARG1 (e / expose-01
+:ARG2 s3
+:ARG1-of (s4 / sustain-01))
+:ARG2 (a7 / and
+:op1 (d2 / downregulate-01
+:ARG1 (e2 / enzyme :name (n / name :op1 ""ERK1/2"")
+:ARG3-of (p / phosphorylate-01)))
+:op2 (i / increase-01
+:ARG1 (s5 / signal-07
+:mod (a5 / apoptosis)
+:location (d4 / downstream)))
+:op3 (d3 / decrease-01
+:ARG1 (p2 / progress-01
+:ARG1 (c / cycle-02
+:ARG1 (c2 / cell))))))
+:ARG1-of (d5 / describe-01
+:ARG0 (p5 / publication-91
+:ARG0 (a3 / and
+:op1 (p3 / person :name (n2 / name :op1 ""Davies""))
+:op2 (p4 / person
+:mod (o / other)))
+:time (d / date-entity :year 2007))))","(m / mechanism-01
+:ARG0 (s / study-01
+:ARG1 (b / biomarker
+:mod (m2 / mechanistic)
+:mod (e / effect-01
+:ARG1 (s2 / selumetinib)
+:ARG2 (m3 / model
+:mod (t / tumour)
+:mod (x / xenograft))))
+:ARG2 (s3 / show-01
+:ARG1 (a / addition
+:op1 (d / downregulation
+:ARG1 (p / pERK1/2))
+:op2 (e2 / exposure-01
+:ARG1 (a2 / agent)))
+:ARG2 (i / increase-01
+:ARG1 (s4 / signalling
+:ARG1-of (a3 / apoptotic))
+:ARG2 (d2 / decrease-01
+:ARG1 (p2 / progression
+:mod (c / cell)
+:mod (c2 / cycle))))))"
+a_pmid_2234_3622.62,"Furthermore, a chronic dosing schedule of selumetinib (25 mg kg<sup>–1</sup> per bid for 14 doses) in HCT-116 xenografts increased the levels of the pro-apoptotic BH3 protein Bim-EL (∼4-fold increase) compared with no change with the level of this protein following a shorter dosing period (three doses) (<xref ref-type=""fig"" rid=""fig1"">Figure 1</xref>).","(a / and
+:op2 (i / increase-01
+:ARG0 (s / schedule-01
+:ARG1 (d2 / dose-01 :quant 14
+:ARG2 (s2 / small-molecule :name (n4 / name :op1 ""selumetinib"")
+:quant (c4 / concentration-quantity :quant 25
+:unit (m / milligram-per-kilogram)))
+:mod (c / chronic)
+:frequency (r / rate-entity-91
+:ARG1 2
+:ARG2 (t / temporal-quantity :quant 1
+:unit (d5 / day)))))
+:ARG1 (l / level
+:quant-of (p / protein :name (n2 / name :op1 ""Bim-EL"")
+:ARG0-of (f / favor-01
+:ARG1 (a2 / apoptosis))
+:ARG1-of (i2 / include-91
+:ARG2 (p4 / protein-family :name (n3 / name :op1 ""BH3"")))))
+:ARG4 (p2 / product-of :op1 4)
+:compared-to (c2 / change-01 :polarity -
+:ARG1 (l2 / level
+:quant-of p)
+:ARG1-of (f3 / follow-01
+:ARG2 (p3 / period
+:time-of (d3 / dose-01)
+:ARG1-of (s3 / short-07
+:degree (m2 / more))
+:ARG1-of (m3 / mean-01
+:ARG3 (d4 / dose-01 :quant 3)))))
+:location (x / xenograft
+:mod (c3 / cell-line :name (n / name :op1 ""HCT-116""))))
+:ARG1-of (d / describe-01
+:ARG0 (f2 / figure :mod 1)))","(m / multi-sentence
+:snt1 (i / increase-01
+:ARG1 (l / level
+:mod (p / pro-apoptotic
+:mod (b / BH3
+:mod (p2 / protein
+:name (n / name :op1 ""Bim-EL""))))
+:mod (c / compare-01
+:ARG2 (c2 / change-01
+:ARG1 (l2 / level
+:mod (p3 / protein
+:mod (t / this)))
+:ARG2 (p4 / period
+:mod (d / dosing
+:mod (s / short))))
+:ARG1 (d2 / dosing
+:mod (p5 / period
+:mod (l3 / long
+:ARG1 (s2 / schedule
+:mod (c3 / chronic)
+:ARG1 (s3 / selumetinib
+:mod (d3 / dose
+:quant (n2 / number :op1 25)
+:unit (u / kilogram)
+:ARG1 (b / bid
+:ARG1 (n3 / number :op1 14)
+:ARG2 (d4 / dose)))))))))
+:snt2 (c4 / compare-01
+:ARG2 (c5 / change-01
+:ARG1 (l4 / level
+:mod (p6 / protein
+:mod (t2 / this)))
+:ARG2 (p7 / period
+:mod (d5 / dosing
+:mod (s4 / short)
+:ARG1 (d6 / dose
+:ARG1 (n4 / number :op1 3)))))
+:ARG1 (l5 / level
+:mod (p8 / protein
+:mod (t3 / this)
+:mod (f / following
+:ARG1 (p9 / period
+:mod (d7 / dosing
+:mod (s5 / shorter)))))))
+:snt3 (i2 / increase-01
+:ARG1 l5
+:ARG2 (n5 / number :op1 4)
+:degree (f2 / fold)
+:mod (a / approximately))
+:snt4 (c6 / compare-01
+:ARG2 (c7 / change-01
+:ARG1 l
+:ARG2 (l6 / level
+:mod (p10 / protein
+:mod (t4 / this))))
+:ARG1 (f3 / following
+:ARG1 (p11 / period
+:mod (d8 / dosing
+:mod (s6 / shorter)
+:ARG1 (d9 / dose
+:ARG1 (n6 / number :op1 3)))))))"
+a_pmid_2234_3622.69,"The combination of selumetinib and TMZ in the SW-620 human tumour xenograft model resulted in a significantly enhanced anti-tumour efficacy (103.5% inhibition; <i>P</i><0.0005), compared with selumetinib (52% inhibition; <i>P</i><0.0005) and TMZ (88% inhibition; <i>P</i><0.0005) alone (<xref ref-type=""fig"" rid=""fig2"">Figure 2A</xref>).","(r / result-01
+:ARG1 (c2 / combine-01
+:ARG1 s2
+:ARG2 s3
+:location (c3 / cell-line :name (n / name :op1 ""SW-620"")
+:mod (x / xenograft
+:mod (t3 / tumor
+:mod (h / human)))))
+:ARG2 (e / efficacy
+:ARG0-of (c / counter-01
+:ARG1 t3)
+:ARG1-of (e2 / enhance-01
+:ARG1-of (s / significant-02))
+:ARG1-of (m5 / mean-01
+:ARG2 (a3 / and
+:op1 (i3 / inhibit-01
+:degree (p / percentage-entity :value 103.5))
+:op2 (s4 / statistical-test-91
+:ARG2 (l / less-than :op1 0.0005)))))
+:ARG1-of (d / describe-01
+:ARG0 (f / figure :mod ""2A""))
+:compared-to (a / and
+:op1 (s2 / small-molecule :name (n2 / name :op1 ""selumetinib"")
+:ARG0-of (i / inhibit-01
+:degree (p2 / percentage-entity :value 52))
+:mod s4)
+:op2 (s3 / small-molecule :name (n3 / name :op1 ""TMZ"")
+:ARG0-of (i2 / inhibit-01
+:degree (p3 / percentage-entity :value 88))
+:mod s4)
+:mod (a2 / alone)))","(m / multi-sentence
+:snt1 (r / result-01
+:ARG1 (e / enhance-01
+:ARG1 (e2 / efficacy
+:mod (a / anti-01
+:ARG1 (t / tumour)))
+:ARG2 (c / combination
+:op1 (s / selumetinib)
+:op2 (t2 / TMZ)))
+:ARG2 (i / inhibition
+:degree (p / percent
+:quant 103.5))
+:ARG3 (m2 / model
+:mod (x / xenograft
+:mod (t3 / tumour
+:mod (h / human
+:mod (s2 / SW-620)))))
+:snt2 (c2 / compare-01
+:ARG1 (r2 / result-01
+:ARG1 (i2 / inhibition
+:degree (p2 / percent
+:quant 52))
+:ARG2 (s3 / selumetinib))
+:ARG2 (r3 / result-01
+:ARG1 (i3 / inhibition
+:degree (p3 / percent
+:quant 88))
+:ARG2 (t4 / TMZ))
+:ARG3 (a2 / alone
+:op1 (x / xref
+:ref-type ""fig""
+:rid ""fig2""
+:op1 ""Figure 2A"")))
+:snt3 (p4 / P
+:op1 (l / less-than
+:op1 (i4 / i)
+:op2 (q / quant
+:op1 0.0005))))"
+a_pmid_2234_3622.75,"IHC analysis and histological scoring was performed on all the tissues collected to examine, selumetinib effects (pERK1/2), DNA damage (<i>γ</i>H2A.X), apoptosis (cleaved caspase 3) and the cell cycle (pHH3) (scoring data not shown).","(p / perform-02
+:ARG1 (a5 / and
+:op1 (a6 / analyze-01
+:mod (i / immunohistochemistry))
+:op2 (s2 / score-01
+:ARG3 (h / histology)))
+:location (t / tissue
+:mod (a7 / all)
+:ARG1-of (c3 / collect-01
+:purpose (a4 / and
+:op1 (e / examine-01
+:ARG1 (a3 / affect-01
+:ARG0 (s / small-molecule
+:name (n5 / name :op1 ""selumetinib""))
+:ARG2 (e2 / enzyme
+:name (n / name :op1 ""ERK1/2"")
+:ARG3-of (p2 / phosphorylate-01))))
+:op2 (e3 / examine-01
+:ARG1 (d / damage-01
+:ARG1 (n7 / nucleic-acid :wiki ""DNA""
+:name (n8 / name :op1 ""DNA"")))
+:instrument (p5 / protein
+:name (n2 / name :op1 ""γH2A.X"")))
+:op3 (e4 / examine-01
+:ARG1 (a2 / apoptosis)
+:instrument (p6 / protein
+:name (n3 / name :op1 ""Cleaved"" :op2 ""Caspase"" :op3 3)))
+:op4 (e5 / examine-01
+:ARG1 (c / cycle-02
+:ARG1 (c2 / cell))
+:instrument (p4 / protein
+:name (n4 / name :op1 ""HH3"")
+:ARG3-of (p3 / phosphorylate-01))))))
+:ARG1-of (s3 / show-01 :polarity -
+:ARG0 (d3 / data
+:mod (s4 / score-01))))","(m / multi-sentence
+:snt1 (p / perform-01
+:ARG0 (a / analysis
+:mod (i / ihc))
+:ARG1 (s / score-01
+:ARG0 a
+:ARG1 (h / histological)
+:ARG2 (t / tissue
+:ARG0-of (c / collect-01)))
+:ARG2 (e / examine-01
+:ARG1 t
+:ARG2 (e2 / effect-01
+:ARG1 (s2 / selumetinib)
+:ARG2 (p2 / protein
+:ARG0-of (p3 / phosphorylate-01
+:ARG1 (e3 / erk1/2))))
+:ARG2 (d / damage-01
+:ARG1 (d2 / dna)
+:ARG2 (h2 / h2a.x))
+:ARG2 (a2 / apoptosis-01
+:ARG1 (c2 / caspase-03)
+:ARG2 (c3 / cleave-01))
+:ARG2 (c4 / cycle-01
+:ARG1 (c5 / cell)
+:ARG2 (h3 / hh3))))
+:snt2 (s4 / show-01
+:ARG1 (d3 / data
+:mod (s5 / score-01))
+:ARG2 (n / not)))"
+a_pmid_2234_3622.76,"The sampling timepoint, which gave us the greatest insight into the mechanistic effects of these agents was that taken when we started to see the TMZ and combination groups diverge (PD2).","(t3 / timepoint
+:mod (t5 / thing :name (n / name :op1 ""PD2""))
+:ARG1-of (t4 / take-01
+:ARG0 w
+:time (s3 / start-01
+:ARG0 w
+:ARG1 (s2 / see-01
+:ARG0 w
+:ARG1 (d / diverge-01
+:ARG0 (g4 / group
+:mod (s4 / small-molecule :name (n2 / name :op1 ""TMZ"")))
+:ARG1 (g3 / group
+:mod (c / combine-01)
+:ARG1-of (m3 / mean-01))))))
+:domain (t / timepoint
+:time-of (s / sample-01)
+:ARG0-of (g2 / give-01
+:ARG1 (i / insight
+:mod (g / great
+:degree (m / most))
+:topic (a / affect-01
+:ARG0 (a2 / agent
+:mod (t2 / this))
+:mod (m2 / mechanistic)))
+:ARG2 (w / we))))","(s / see-01
+:ARG0 (w / we)
+:ARG1 (t / timepoint
+:mod (s2 / sample-01)
+:ARG1-of (g / give-01
+:ARG1 (i / insight
+:ARG1-of (m / mechanistic)
+:ARG2 (e / effect
+:ARG1-of (a / agent
+:mod (t2 / these)))
+:degree (g2 / great)))
+:ARG1-of (t2 / take-01
+:ARG0 w))
+:ARG1-of (d / diverge-01
+:ARG1 (g3 / group
+:mod (c / combination)
+:mod (t3 / TMZ)))
+:ARG1-of (P / PD2))"
+a_pmid_2234_3622.77,"As expected, in response to selumetinib or TMZ alone we saw changes in the mechanistic biomarkers pERK1/2 (decrease) and <i>γ</i>H2A.X (increase), respectively, and a reduction in mitotic cells as shown by pHH3 in the selumetinib group compared with an increase in the TMZ tissues (<xref ref-type=""fig"" rid=""fig2"">Figure 2B</xref>).","(r2 / respond-01
+:ARG1 (o / or
+:op1 (s2 / small-molecule :name (n4 / name :op1 ""selumetinib""))
+:op2 (s4 / small-molecule :name (n5 / name :op1 ""TMZ""))
+:mod (a / alone))
+:ARG2 (s3 / see-01
+:ARG0 w
+:ARG1 (a3 / and
+:op1 (c / change-01
+:ARG1 (b2 / biomarker
+:mod (m3 / mechanistic)
+:ARG1-of (m5 / mean-01
+:ARG2 (a4 / and
+:op1 (e2 / enzyme :name (n / name :op1 ""ERK1/2"")
+:ARG1-of (d / decrease-01)
+:ARG3-of p2)
+:op2 (p3 / protein :name (n2 / name :op1 ""γH2A.X"")
+:mod m3
+:ARG1-of (i / increase-01))))))
+:op2 (r / reduce-01
+:ARG1 (c2 / cell
+:mod (m4 / mitosis))
+:ARG1-of (s / show-01
+:ARG0 (p / protein :name (n3 / name :op1 ""HH3"")
+:ARG3-of (p2 / phosphorylate-01))
+:location (g / group
+:mod s2))
+:compared-to (i2 / increase-01
+:ARG1 (t2 / tissue
+:mod s4))))
+:ARG1-of (e / expect-01
+:ARG0 (w / we))))","(m / multi-sentence
+:snt1 (e / expect-01
+:ARG1 (r / response-01
+:ARG2 (s / selumetinib)
+:ARG2 (t / TMZ)
+:ARG1 (c / change-01
+:ARG1 (b / biomarker
+:mod (m2 / mechanistic))
+:ARG2 (d / decrease-01
+:ARG1 (p / pERK1/2)))
+:ARG1 (c2 / change-01
+:ARG1 (b2 / biomarker
+:mod (g / γH2A.X))
+:ARG2 (i / increase-01)))
+:ARG1 (r2 / reduction-01
+:ARG1 (c3 / cell
+:mod (m3 / mitotic))
+:ARG2 (s2 / show-01
+:ARG1 (p2 / pHH3)
+:ARG2 (g2 / group
+:mod (s3 / selumetinib))))
+:ARG1 (i2 / increase-01
+:ARG1 (t2 / tissue
+:mod (f / fig)
+:mod (t3 / TMZ))
+:ARG2 (g3 / group)))
+:snt2 (c4 / compare-01
+:ARG1 g2
+:ARG2 g3))"
+a_pmid_2234_3622.81,"Continuous, concurrent combinations of selumetinib and docetaxel resulted in significant anti-tumour effects in several models (<xref ref-type=""table"" rid=""tbl1"">Table 1</xref> and <xref ref-type=""fig"" rid=""fig3"">Figure 3A</xref>).","(r / result-01
+:ARG1 (c / combine-01
+:ARG1 (s / small-molecule :name (n / name :op1 ""selumetinib""))
+:ARG2 (s4 / small-molecule :name (n2 / name :op1 ""docetaxel""))
+:ARG1-of (c2 / concurrent-02)
+:ARG1-of (c3 / continue-01))
+:ARG2 (a / affect-01
+:ARG2 (c4 / counter-01
+:ARG0 (t / tumor))
+:location (m / model
+:quant (s2 / several))
+:ARG1-of (s3 / significant-02))
+:ARG1-of (d2 / describe-01
+:ARG0 (a2 / and
+:op1 (t2 / table :mod 1)
+:op2 (f / figure :mod ""3A""))))","(m / multi-sentence
+:snt1 (r / result-01
+:ARG1 (c / combination
+:mod (c2 / continuous)
+:mod (c3 / concurrent)
+:ARG1-of (r2 / result-01
+:ARG1 (e / effect-01
+:ARG1 (a / anti
+:ARG1 (t / tumour
+:mod (s / significant))))
+:ARG2 (m2 / model
+:quant (s2 / several))))
+:ARG2 (t / table
+:ARG1 (n / name :op1 ""1""))
+:ARG3 (f / figure
+:ARG1 (n2 / name :op1 ""3A""))))"
+a_pmid_2234_3622.82,"However, we were interested to explore the effect of dose sequencing on the anti-tumour efficacy of these two agents as administration of selumetinib and docetaxel as monotherapies results in distinct cell cycle phenotypes; a G1 or mitotic arrest, respectively.","(c / contrast-01
+:ARG2 (c2 / cause-01
+:ARG0 (r / result-01
+:ARG1 (a3 / administer-01
+:ARG1 (a4 / and
+:op1 (s2 / small-molecule :name (n2 / name :op1 ""selumetinib""))
+:op2 (s3 / small-molecule :name (n3 / name :op1 ""docetaxel"")))
+:manner (m / monotherapy))
+:ARG2 (p / phenotype
+:mod (c4 / cycle-02
+:ARG1 (c5 / cell)
+:mod (d2 / distinct))
+:ARG1-of (m5 / mean-01
+:ARG2 (a5 / and
+:op2 (a6 / arrest-02
+:time (e3 / event :name (n / name :op1 ""G1"")))
+:op3 (a7 / arrest-02
+:time (m2 / mitosis))))))
+:ARG1 (i / interest-01
+:ARG1 (w / we)
+:ARG2 (e / explore-01
+:ARG0 w
+:ARG1 (a / affect-01
+:ARG0 (s / sequence-01
+:ARG1 (d / dose-01))
+:ARG1 (e2 / efficacy
+:poss (a2 / agent :quant 2
+:mod (t2 / this)
+:ARG1-of (m4 / mean-01
+:ARG2 a4)
+:ARG0-of (c3 / counter-01
+:ARG1 (t / tumor)))))))))","(m / multi-sentence
+:snt1 (i / interest-01
+:ARG0 (w / we)
+:ARG1 (e / explore-01
+:ARG0 w
+:ARG1 (e2 / effect
+:ARG1 (s / sequence-01
+:ARG0 (d / dose)
+:ARG1 (o / on
+:ARG1 (e3 / efficacy
+:ARG1 (a / agent
+:mod (t / two)
+:mod (t2 / these))
+:ARG2 (a2 / anti-tumour))))
+:ARG2 (p / phenotype
+:ARG1 (r / result-01
+:ARG0 (a3 / administration)
+:ARG1 (c / cycle
+:mod (d2 / distinct)
+:mod (p2 / phenotype
+:ARG1 (a4 / arrest-01
+:ARG1 (g / G1))
+:mod (m / mitotic))))))))
+:snt2 (r2 / respectively
+:op1 (a5 / arrest-01
+:ARG1 (m2 / mitotic))
+:op2 (a6 / arrest-01
+:ARG1 (g2 / G1))))"
+a_pmid_2234_3622.88,"In order to determine the mechanism of action in the scheduling studies with docetaxel, a series of tumour tissue samples were taken at different time points following exposure to the two dosing regimens (<xref ref-type=""fig"" rid=""fig4"">Figure 4Ai and Bi</xref>).","(s / sample-01
+:ARG1 (t2 / tissue
+:mod (t3 / tumor))
+:time (p / point
+:mod (t / time)
+:ARG1-of (d4 / differ-02))
+:ARG1-of (f / follow-01
+:ARG2 (e / expose-01
+:ARG2 (r2 / regimen :quant 2
+:ARG0-of (d / dose-01))))
+:ARG1-of (d2 / describe-01
+:ARG0 (a / and
+:op1 (f2 / figure :mod ""4Ai"")
+:op2 (f3 / figure :mod ""4Bi"")))
+:quant (s2 / series)
+:purpose (d3 / determine-01
+:ARG1 (m / mechanism
+:mod (a2 / act-02)
+:purpose (s3 / study-01
+:ARG1 (s5 / small-molecule :name (n / name :op1 ""docetaxel""))
+:ARG1-of (s4 / schedule-01)))))","(m / multi-sentence
+:snt1 (d / determine-01
+:ARG0 (o / order
+:ARG1 (m2 / mechanism
+:ARG1-of (a / action-01)))
+:ARG1 (s / study-01
+:ARG0 (s2 / schedule-01)
+:ARG1 (e / expose-01
+:ARG0 (t / tumour)
+:ARG1 (s3 / sample-01
+:ARG0 t
+:time (p / point
+:mod (d2 / different)
+:op1 (e2 / expose-01
+:ARG0 t
+:ARG1 (r / regimen
+:mod (d3 / dose-01
+:ARG1 (t2 / two))))))))
+:snt2 (t / take-01
+:ARG0 (s4 / sample-01
+:ARG0 (t3 / tissue)
+:ARG1 (p2 / point
+:mod (t4 / time)
+:op1 (f / follow-01
+:ARG0 (e3 / exposure
+:ARG1 (t5 / two)
+:ARG2 (r2 / regimen
+:mod (d4 / dose-01
+:ARG1 (d5 / docetaxel))))
+:ARG1 (x / xref
+:ref-type ""fig""
+:rid ""fig4""
+:op1 (f2 / figure
+:op1 ""4Ai""
+:op2 ""Bi""))))))"
+a_pmid_2234_3622.92,When selumetinib was administered alone levels of pHH3 decreased at several measurement points compared with controls (PD2 <i>P</i><0.0005; PD4 <i>P</i><0.005; PD5 <i>P</i><0.0005; PD6 <i>P</i><0.0005) consistent with the inhibition of the MEK/ERK pathway resulting in a G1/S arrest.,"(d / decrease-01
+:ARG1 (l / level
+:quant-of (p7 / protein :name (n3 / name :op1 ""HH3"")
+:ARG3-of (p8 / phosphorylate-01)))
+:time (a / administer-01
+:ARG1 (s / small-molecule :name (n8 / name :op1 ""selumetinib"")
+:mod (a3 / alone)))
+:time (p2 / point
+:quant (s2 / several)
+:mod (m3 / measure-01)
+:ARG1-of (m4 / mean-01
+:ARG2 (a4 / and
+:op1 (t / thing :name (n4 / name :op1 ""PD2""))
+:op2 (t2 / thing :name (n5 / name :op1 ""PD4""))
+:op3 (t4 / thing :name (n6 / name :op1 ""PD5""))
+:op4 (t5 / thing :name (n7 / name :op1 ""PD6"")))))
+:compared-to (c / control)
+:ARG1-of (c2 / consistent-01
+:ARG2 (i / inhibit-01
+:ARG1 (p / pathway :name (n / name :op1 ""MEK/ERK""))
+:ARG1-of (r / result-01
+:ARG2 (a2 / arrest-02
+:time (e / event :name (n2 / name :op1 ""G1/S""))))))
+:ARG1-of (s3 / statistical-test-91
+:ARG2 (l2 / less-than :op1 0.0005)))","(s / sentence
+:ARG0 (a / administer-01
+:ARG1 (s2 / selumetinib)
+:ARG2 (l / level
+:mod (a2 / alone)))
+:ARG1 (d / decrease-01
+:ARG1 (p / pHH3)
+:ARG2 (m / measurement-point
+:mod (s3 / several)
+:mod (c / compare-01
+:ARG1 (c2 / control))))
+:ARG2 (c2 / consistent
+:ARG1 (i / inhibit-01
+:ARG1 (p2 / pathway
+:mod (m2 / MEK/ERK)))
+:ARG2 (a3 / arrest-01
+:ARG1 (g / G1/S)
+:ARG2 (r / result-01))))"
+a_pmid_2234_3622.95,"In comparison, tumour tissue analysed in the same study after the chronic dosing schedule of selumetinib did not demonstrate an increase in cleaved caspase 3 levels in the combination group when compared with the single agents alone.","(c / compare-01
+:ARG1 (d / demonstrate-01 :polarity -
+:ARG0 (t / tissue
+:source (t2 / tumor)
+:ARG1-of (a3 / analyze-01
+:ARG0 (s2 / study-01
+:ARG1-of (s3 / same-01)
+:time (a4 / after
+:op1 (s4 / schedule-01
+:ARG1 (d2 / dose-01
+:ARG2 (s5 / small-molecule :name (n2 / name :op1 ""selumetinib""))
+:mod (c4 / chronic)))))))
+:ARG1 (i / increase-01
+:ARG1 (l / level
+:location (g / group
+:mod (c2 / combine-01))
+:quant-of (p / protein :name (n / name :op1 ""cleaved"" :op2 ""caspase"" :op3 ""3""))))
+:time (c3 / compare-01
+:ARG2 (a / agent
+:ARG1-of (s / single-02))
+:mod (a2 / alone))))","(m / multi-sentence
+:snt1 (c / compare-01
+:ARG1 (t / tissue
+:mod (t2 / tumour))
+:ARG2 (a / analyse-01
+:ARG1 t
+:ARG2 (s / study
+:mod (s2 / same)
+:ARG1 (d / dose-01
+:ARG1 (s3 / schedule
+:mod (c2 / chronic)
+:ARG0 (s4 / selumetinib))))
+:ARG2 (g / group
+:mod (c3 / combination)
+:ARG1-of (i / increase-01
+:ARG1 (l / level
+:mod (c4 / cleaved)
+:ARG1 (c5 / caspase-03)))))))
+:snt2 (c6 / compare-01
+:ARG1 (a2 / agent
+:mod (s5 / single))
+:ARG2 (a3 / alone)))"
