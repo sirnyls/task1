@@ -1,12 +1,12 @@
 import warnings
-import smatch
+import smatch_modified
 import pandas as pd
 
 def calc_with_warnings(true_amr, pred_amr):
     try:
         # redirect warnings 
         with warnings.catch_warnings(record=True) as w:
-            best_match_num, test_triple_num, gold_triple_num = smatch.get_amr_match(true_amr, pred_amr)
+            best_match_num, test_triple_num, gold_triple_num = smatch_modified.get_amr_match(true_amr, pred_amr)
         
             if w:
                 error_message = str(w[-1].message)
@@ -20,19 +20,33 @@ def calc_with_warnings(true_amr, pred_amr):
         error_message = str(e)
         return None, None, None, error_message
 
-# testing
-# Note: I ran the script and often got the error message "Error in parsing AMR ... " and 
-# " 'NoneType' object has no attribute 'rename_node' "
-# not sure if there might be something wrong in my script or if I understood the task correctly
-# At https://github.com/snowblink14/smatch/blob/master/smatch.py#L644 I often see this exception...
 
-df = pd.read_csv("test_data.csv")
+df = pd.read_csv("bio_amr_gpt4_invalid.csv")
 data = df.to_dict(orient='records')
- 
+
+
+true_amr = data[1]['gold_amr']
+pred_amr = data[1]['gpt4_0613_amr']
+id = data[0]['id']
+
+
+best_match, test_triple_num, gold_triple_num, error_message = calc_with_warnings(true_amr, pred_amr)
+
+if error_message is not None:
+    print("id:", id)
+    print("Error:", error_message)
+else: 
+    print("best match:", best_match)
+    print("test_triple_num:", test_triple_num)
+    print("gold_triple_num:", gold_triple_num)
+
+
+
+'''  
 for amr_pair in data: 
 
-    true_amr = amr_pair['true_amr']
-    pred_amr = amr_pair['pred_amr']
+    true_amr = amr_pair['gold_amr']
+    pred_amr = amr_pair['gpt4_0613_amr']
     id = amr_pair['id']
 # smatch.generate_amr_lines(true_amr, pred_amr)
 
@@ -41,5 +55,9 @@ for amr_pair in data:
     if error_message is not None:
         print("id:", id)
         print("Error:", error_message)
-
+    else: 
+        print("best match:", best_match)
+        print("test_triple_num:", test_triple_num)
+        print("gold_triple_num:", gold_triple_num)
+'''
 
