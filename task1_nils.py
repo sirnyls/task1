@@ -3,8 +3,6 @@ import smatch_modified
 import pandas as pd
 
 
-
-
 df = pd.read_csv("bio_amr_gpt4_invalid.csv")
 data = df.to_dict(orient='records')
 
@@ -26,10 +24,9 @@ def calc_with_warnings(true_amr, pred_amr):
     except Exception as e:
         # if exception is raised, capture error msg
         
-        best_match_num, test_triple_num, gold_triple_num, warning_message = smatch_modified.get_amr_match(true_amr, pred_amr)
-        warning_message.append(str(e))
+        error_message = str(e)
 
-        return None, None, None, warning_message
+        return None, None, None, error_message
 
 best_match_num, test_triple_num, gold_triple_num, warning_message = calc_with_warnings(true_amr, pred_amr)
 
