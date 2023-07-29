@@ -665,15 +665,22 @@ def get_amr_match(cur_amr1, cur_amr2, sent_num=1, justinstance=False, justattrib
     error_message = []
     
     amr_pair = []
+    temp = []
+    
     for i, cur_amr in (1, cur_amr1), (2, cur_amr2):
         try:
             
+            temp = amr.AMR.parse_AMR_line(cur_amr)
+            if temp[1] == '':
+                amr_pair.append(temp[0])
+            if temp[0] == None: 
+                error_message.append(temp[1])
 
-            amr_pair.append(amr.AMR.parse_AMR_line(cur_amr)[0])
-
-            
-
+            print ("temp:", temp)
             print ("Nils:", error_message[0])
+            #print (type(temp))
+            #print("Error:", error_message)
+
         except Exception as e:
             print("Error in parsing amr %d: %s" % (i, cur_amr), file=ERROR_LOG)
             print("Please check if the AMR is ill-formatted. Ignoring remaining AMRs", file=ERROR_LOG)
@@ -732,7 +739,7 @@ def get_amr_match(cur_amr1, cur_amr2, sent_num=1, justinstance=False, justattrib
     else:
         test_triple_num = len(instance1) + len(attributes1) + len(relation1)
         gold_triple_num = len(instance2) + len(attributes2) + len(relation2)
-    return best_match_num, test_triple_num, gold_triple_num, error_message
+    return best_match_num, test_triple_num, gold_triple_num, error_message[0]
 
 
 def score_amr_pairs(f1, f2, justinstance=False, justattribute=False, justrelation=False):

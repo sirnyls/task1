@@ -336,7 +336,8 @@ class AMR(object):
                     # if this node name is already in node_dict, it is duplicate
                     if node_name in node_dict:
                         print("Duplicate node name ", node_name, " in parsing AMR", file=ERROR_LOG)
-                        error_message = "Duplicate node name  {node_name} in parsing AMR"
+                        error_message = "Duplicate node name " + node_name + " in parsing AMR"
+
                         return None, error_message
                     # push the node name to stack
                     stack.append(node_name)
@@ -355,7 +356,7 @@ class AMR(object):
                     # error if in other state
                     print("Error in parsing AMR", line[0:i + 1], file=ERROR_LOG)
                     temp = line[0:i + 1]
-                    error_message = "Error in parsing AMR {temp} in parsing AMR"
+                    error_message = "Error in parsing AMR" + temp  
                     return None, error_message
                 state = 3
             elif c == ")":
@@ -366,7 +367,7 @@ class AMR(object):
                 if len(stack) == 0:
                     print("Unmatched parenthesis at position", i, "in processing", line[0:i + 1], file=ERROR_LOG)
                     temp = line[0:i + 1]
-                    error_message = "Unmatched parenthesis at position {i} in processing {temp}"
+                    error_message = "Unmatched parenthesis at position" + i + "in processing " + temp
                     return None, error_message
                 # Last significant symbol is ":". Now we encounter ")"
                 # Example:
@@ -379,7 +380,7 @@ class AMR(object):
                     if len(parts) < 2:
                         print("Error processing", line[:i + 1], temp_attr_value, file=ERROR_LOG)
                         temp = line[0:i + 1]
-                        error_message = "Error processing {temp} {temp_attr_value}"
+                        error_message = "Error processing" + temp + temp_attr_value
                         return None, error_message
                     relation_name = parts[0].strip()
                     relation_value = parts[1].strip()
@@ -414,7 +415,7 @@ class AMR(object):
         for v in node_name_list:
             if v not in node_dict:
                 print("Error: Node name not found", v, file=ERROR_LOG)
-                error_message = "Error: Node name not found {v}"
+                error_message = "Error: Node name not found" + v 
                 return None, error_message
             else:
                 node_value_list.append(node_dict[v])
@@ -441,7 +442,7 @@ class AMR(object):
         # add TOP as an attribute. The attribute value just needs to be constant
         attribute_list[0].append(["TOP", 'top'])
         result_amr = AMR(node_name_list, node_value_list, relation_list, attribute_list)
-        return result_amr, None
+        return result_amr, ""
 
 # test AMR parsing
 # run by amr.py [file containing AMR]
