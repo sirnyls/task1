@@ -16,8 +16,8 @@ pred_amr = data[1]['gpt4_0613_amr']
 
 best_match_num, test_triple_num, gold_triple_num, error_message = smatch_modified.get_amr_match(true_amr, pred_amr)
 
-if error_message is not None:
-    print("Error:", error_message)
+
+print("FINISH:", error_message)
 
 
 
