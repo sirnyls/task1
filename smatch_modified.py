@@ -661,12 +661,13 @@ def generate_amr_lines(f1, f2):
         break
 
 
-def get_amr_match(cur_amr1, cur_amr2, id, sent_num=1, justinstance=False, justattribute=False, justrelation=False):
+def get_amr_match(cur_amr1, cur_amr2, current_id, sent_num=1, justinstance=False, justattribute=False, justrelation=False):
     
-    error_message = []
+    error_messages = []
     amr_pair = []
     temp = []
-    df = pd.read_csv('bio_amr_gpt4_invalid.csv')
+    file_path = 'bio_amr_gpt4_invalid.csv'
+    df = pd.read_csv(file_path)
     
     
     for i, cur_amr in (1, cur_amr1), (2, cur_amr2):
@@ -676,19 +677,19 @@ def get_amr_match(cur_amr1, cur_amr2, id, sent_num=1, justinstance=False, justat
             #print ("temp:", temp)
             j = i - 1
             amr_pair.append(temp[j][0])
-            error_message.append(temp[j][1])
-            
-    
-
+            error_messages.append(temp[j][1])
+               
         except Exception as e:
             print("Error in parsing amr %d: %s" % (i, cur_amr), file=ERROR_LOG)
             print("Please check if the AMR is ill-formatted. Ignoring remaining AMRs", file=ERROR_LOG)
             print("Error message: %s" % e, file=ERROR_LOG)
 
-    
-    df.loc[df['id'] == 'a_pmid_2234_3622.61', 'error'] = error_message[1]
-    output_file_path = 'bio_amr_gpt4_invalid_with_error.csv'
-    df.to_csv(output_file_path, index=False)
+    print ("Error List: ", error_messages)
+    print ("id:", current_id)
+    for index, error in enumerate(error_messages):
+        print ("Error element", error)
+        df.loc[df['id'] == current_id, 'error_'+str(index)] = error
+    df.to_csv(file_path, index=False) 
 
     amr1, amr2 = amr_pair
     prefix1 = "a"

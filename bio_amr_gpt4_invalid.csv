@@ -1,4 +1,4 @@
-id,text,AMR3_structbart_L_amr,split,source_set,gold_amr,text_detok,elit_amr,elit_smatch,AMR3_structbart_L_smatch,gpt_3.5_turbo_0613_amr,gpt4_0613_amr,gpt_3.5_turbo_0613_smatch,gpt4_0613_smatch
+id,text,AMR3_structbart_L_amr,split,source_set,gold_amr,text_detok,elit_amr,elit_smatch,AMR3_structbart_L_smatch,gpt_3.5_turbo_0613_amr,gpt4_0613_amr,gpt_3.5_turbo_0613_smatch,gpt4_0613_smatch,error_0,error_1
 a_pmid_2234_3622.61,"Mechanistic biomarker studies of the effects of selumetinib in human tumour xenograft models have shown that, in addition to pERK1/2 downregulation, a sustained exposure to the agent results in an increase in downstream apoptotic signalling and a decrease in cell cycle progression (<xref ref-type=""bibr"" rid=""bib6"">Davies <i>et al</i>, 2007</xref>).","(s / show-01
     :ARG0 (s3 / study-01
         :ARG1 (a2 / affect-01
@@ -154,7 +154,19 @@ a_pmid_2234_3622.61,"Mechanistic biomarker studies of the effects of selumetinib
         :name (n / name :op1 ""Davies"" :op2 ""et"" :op3 ""al"" :op4 "", 2007"")
         :mod (x2 / xref
             :mod (b2 / bibr)
-            :mod (r / rid :op1 ""bib6""))))",-1.0,-1.0
+            :mod (r / rid :op1 ""bib6""))))",-1.0,-1.0,,"Error in parsing AMR(s / study-01
+    :ARG0 (b / biomarker
+        :mod (m / mechanistic))
+    :ARG1 (e / effect-01
+        :ARG0 (s2 / selumetinib)
+        :ARG1 (m2 / model
+            :mod (x / xenograft)
+            :mod (t / tumor
+                :mod (h / human))))
+    :ARG2-of (s3 / show-01
+        :ARG1 (a / and
+            :op1 (d / downregulate-01
+                :ARG0 (p / pERK1/"
 a_pmid_2234_3622.75,"IHC analysis and histological scoring was performed on all the tissues collected to examine, selumetinib effects (pERK1/2), DNA damage (<i>γ</i>H2A.X), apoptosis (cleaved caspase 3) and the cell cycle (pHH3) (scoring data not shown).","(p / perform-02
     :ARG1 (a4 / and
         :op1 (a3 / analyze-01
@@ -328,7 +340,7 @@ a_pmid_2234_3622.75,"IHC analysis and histological scoring was performed on all 
                 :mod (p2 / pHH3))))
     :mod (s3 / score-01
         :ARG1 (d3 / data)
-        :ARG2 (s4 / show-01 :polarity -)))",-1.0,-1.0
+        :ARG2 (s4 / show-01 :polarity -)))",-1.0,-1.0,,Duplicate node name p in parsing AMR
 a_pmid_2234_3622.92,When selumetinib was administered alone levels of pHH3 decreased at several measurement points compared with controls (PD2 <i>P</i><0.0005; PD4 <i>P</i><0.005; PD5 <i>P</i><0.0005; PD6 <i>P</i><0.0005) consistent with the inhibition of the MEK/ERK pathway resulting in a G1/S arrest.,"(d / decrease-01
     :ARG1 (l / level
         :mod (p3 / protein
@@ -488,7 +500,7 @@ a_pmid_2234_3622.92,When selumetinib was administered alone levels of pHH3 decre
                     :op2 ""/""
                     :op3 ""ERK""))
             :result (a3 / arrest-01
-                :ARG1 (g / G1/S)))))",-1.0,-1.0
+                :ARG1 (g / G1/S)))))",-1.0,-1.0,,
 a_pmid_2234_3622.95,"In comparison, tumour tissue analysed in the same study after the chronic dosing schedule of selumetinib did not demonstrate an increase in cleaved caspase 3 levels in the combination group when compared with the single agents alone.","(c4 / compare-01
     :ARG2 (d / demonstrate-01
         :ARG0 (t / tissue
@@ -612,7 +624,7 @@ a_pmid_2234_3622.95,"In comparison, tumour tissue analysed in the same study aft
                     :mod (s5 / single)
                     :mod (a4 / alone-01))))))
     :mod (i2 / in)
-    :mod (c7 / comparison))",-1.0,-1.0
+    :mod (c7 / comparison))",-1.0,-1.0,,
 bel_pmid_1008_0909.24618,"It has been difficult to interpret the physiologic role of STAT signaling in megakaryocyte development. In multiple cell lines it was reported that TPO induced activation of both STAT3 and STAT5 (5A and 5B) (26, 28?30, 37, 38)....However, when purified murine megakaryocyte extracts were examined, we found that STAT3 was much more pronounced in both tyrosine phosphorylation and DNA binding activity than STAT5 (32)","(m5 / multi-sentence
     :rel (i / induce-01
         :ARG0 (e / enzyme
@@ -829,7 +841,7 @@ bel_pmid_1008_0909.24618,"It has been difficult to interpret the physiologic rol
         :time (w2 / when)))
 (and / and
     :op1 (h / however)
-    :op2 f)",-1.0,-1.0
+    :op2 f)",-1.0,-1.0,,Duplicate node name 5 in parsing AMR
 bel_pmid_1019_4465.23766,"The physiological substrates for SHP- 2 are not known, but overexpression of SHP-2 modulates cell adhesion and migration, as well as insulin activation of the Ras/MAP-kinase pathway Several isoforms of 14-3-3 proteins (b, e, and z) have also been shown to associate with IRS-1, presumably through one of the several RXRXXpS motifs of IRS-1.","(m3 / multi-sentence
     :rel (s / several
         :op2 (p4 / protein
@@ -1022,7 +1034,23 @@ bel_pmid_1019_4465.23766,"The physiological substrates for SHP- 2 are not known,
                 :ARG2 (a5 / and
                     :op1 (b / b)
                     :op2 (e / e)
-                    :op3 (z / z))))))",-1.0,-1.0
+                    :op3 (z / z))))))",-1.0,-1.0,,"Error in parsing AMR(p / physiological-01
+    :ARG1 (s / substrate
+        :mod (s2 / SHP-2))
+    :ARG1-of (k / know-01 :polarity -)
+    :ARG1-of (c / contrast-01
+        :ARG2 (m / multi-sentence
+            :snt1 (o / overexpression
+                :ARG1 s2
+                :ARG1-of (m2 / modulate-01
+                    :ARG2 (a / and
+                        :op1 (c2 / cell-adhesion)
+                        :op2 (m3 / migration-01))
+                    :ARG1-of (a2 / as-well-as
+                        :op1 (a3 / activate-01
+                            :ARG0 (i / insulin)
+                            :ARG1 (p2 / pathway
+                                :mod (r / Ras/"
 bel_pmid_1034_7197.8888,Induction of the urokinase promoter by HGF/SF via the Met receptor was blocked by co-expression of a dominant-negative Grb2 and Sos1 expression construct.,"(b / block-01
     :ARG0 (e4 / express-03
         :ARG1 (a / and
@@ -1141,7 +1169,21 @@ bel_pmid_1034_7197.8888,Induction of the urokinase promoter by HGF/SF via the Me
             :mod (m / Met)
             :ARG1-of (v / via-01
                 :ARG2 (h / HGF/SF))))
-    :time (w / when))",-1.0,-1.0
+    :time (w / when))",-1.0,-1.0,,"Error in parsing AMR(i / induce-01
+    :ARG0 (p / promoter
+        :mod (u / urokinase))
+    :ARG1 (b / block-01
+        :ARG0 (c / co-express-01
+            :ARG1 (g / Grb2
+                :mod (d / dominant-negative))
+            :ARG2 (s / Sos1)
+            :ARG1-of (e / express-01
+                :ARG2 (c2 / construct
+                    :mod (e2 / expression))))
+        :ARG1 (r / receptor
+            :mod (m / Met)
+            :ARG1-of (v / via-01
+                :ARG2 (h / HGF/"
 bel_pmid_1034_7197.20912,"Further, the expression of the catalytically inactive mutants of Ha-Ras, RhoA, c-Raf, and Erk2 or addition of the Mek1-specific inhibitor PD 098059 abrogated the stimulation of the urokinase promoter by HGF/SF.","(a / abate-01
     :ARG0 (o / or
         :op1 (e7 / express-01
@@ -1276,7 +1318,7 @@ bel_pmid_1034_7197.20912,"Further, the expression of the catalytically inactive 
         :ARG0 (c3 / compound :wiki ""Hepatocyte_growth_factor"" :name (n7 / name :op1 ""HGF"" :op2 ""/"" :op3 ""SF""))
         :ARG1 (p6 / promoter
             :mod (u / urokinase))))
-    :mod (f / further))",-1.0,-1.0
+    :mod (f / further))",-1.0,-1.0,,
 bel_pmid_1036_2713.24360,"SOD (250 U/ml) significantly suppressed the IL-6 production and IL-6 mRNA expression induced by XO, whereas catalase (500 U/ml) did not modulate the IL-6 response to XO (Fig. 4).","(c2 / contrast-01
     :ARG1 (s3 / suppress-01
         :ARG0 (d2 / disease
@@ -1407,7 +1449,7 @@ bel_pmid_1036_2713.24360,"SOD (250 U/ml) significantly suppressed the IL-6 produ
     :mod (u2 / unit :quant 500 :unit ""U/ml""))
 (r2 / refer-01
     :ARG1 m2
-    :ARG2 (f / figure :name (n6 / name :op1 ""4"")))",-1.0,-1.0
+    :ARG2 (f / figure :name (n6 / name :op1 ""4"")))",-1.0,-1.0,,Duplicate node name s3 in parsing AMR
 bel_pmid_1036_2713.24538,"TNF-a was dose dependently capable of inducing IL-6 release from NHBE and HS-24 cells (Fig. 5, A and C).","(c / capable-01
     :ARG0-of (d / depend-01)
     :ARG1 (d4 / dose-01
@@ -1504,7 +1546,7 @@ bel_pmid_1036_2713.24538,"TNF-a was dose dependently capable of inducing IL-6 re
         :name (n5 / name :op1 ""5"")
         :mod (a2 / and
             :op1 ""A""
-            :op2 ""C"")))",-1.0,-1.0
+            :op2 ""C"")))",-1.0,-1.0,,
 bel_pmid_1036_2713.39154,"TNF-a was dose dependently capable of inducing IL-6 release from NHBE and HS-24 cells (Fig. 5, A and C).","(c / capable-01
     :ARG0-of (d / depend-01)
     :ARG1 (d4 / dose-01
@@ -1601,7 +1643,7 @@ bel_pmid_1036_2713.39154,"TNF-a was dose dependently capable of inducing IL-6 re
         :name (n5 / name :op1 ""5"")
         :mod (a2 / and
             :op1 ""A""
-            :op2 ""C"")))",-1.0,-1.0
+            :op2 ""C"")))",-1.0,-1.0,,
 bel_pmid_1040_9724.23704,"This study shows that in hepatoma cells, the recruitment and tyrosine phosphorylation of SHP-2, but not SHC, is the primary signaling event associated with the activation of MAP kinases (ERK1/2) by gp130.","(s / show-01
     :ARG0 (s4 / study-01
         :mod (t / this))
@@ -1749,7 +1791,20 @@ bel_pmid_1040_9724.23704,"This study shows that in hepatoma cells, the recruitme
             :ARG1 (s4 / SHP-2))
         :op2 (n / not
             :op1 (r3 / recruit-01
-                :ARG1 (s5 / SHC)))))",-1.0,-1.0
+                :ARG1 (s5 / SHC)))))",-1.0,-1.0,,"Error in parsing AMR(s / show-01
+    :ARG0 (s2 / study
+        :mod (t / this))
+    :ARG1 (a / associate-01
+        :ARG1 (e / event
+            :mod (p / primary)
+            :mod (s3 / signal)
+            :ARG1-of (r / recruit-01)
+            :ARG1-of (p2 / phosphorylate-01
+                :ARG2 (t2 / tyrosine)))
+        :ARG2 (a2 / activate-01
+            :ARG1 (k / kinase
+                :mod (m / MAP)
+                :example (e2 / ERK1/"
 bel_pmid_1044_6041.18018,"PTP-PEST has a COOH-terminal extension that anchors it to the cytosolic aspect of the endoplasmic reticulum. Integrin-mediated adhesion activates calpain, a protease that cleaves this extension and allows the phosphatase to relocate to focal adhesions (21).","(m2 / multi-sentence
     :rel (s / ""small-molecule""
         :name (n3 / name
@@ -1879,7 +1934,7 @@ bel_pmid_1044_6041.18018,"PTP-PEST has a COOH-terminal extension that anchors it
         :ARG1 (r / relocate-01
             :ARG0 (p4 / phosphatase)
             :ARG1 (a6 / adhesion
-                :mod (f / focal))))))",-1.0,-1.0
+                :mod (f / focal))))))",-1.0,-1.0,,
 pmid_1592_8660.87,"In order to assess the level of expression and the activation (by phosphorylation) of members of the MAPK pathway downstream of <i>RAS</i> and <i>BRAF</i>, Western blot analysis was performed on uveal melanoma cell lines (<xref ref-type=""table"" rid=""tbl2"">Table 2A</xref>).","(p2 / perform-02
     :purpose (a5 / assess-01
         :ARG1 (a3 / and
@@ -2010,7 +2065,7 @@ pmid_1592_8660.87,"In order to assess the level of expression and the activation
             :op1 (r / RAS)
             :op2 (b2 / BRAF))))
     :location (t / table
-        :name (n / name :op1 ""2A"")))",-1.0,-1.0
+        :name (n / name :op1 ""2A"")))",-1.0,-1.0,,
 pmid_1592_8660.92,"The levels of total ERK were remarkably similar across all cell lines, with the exception of two cell lines Mel 285 and Mel 290, which had significantly higher levels of total ERK than the others.","(r2 / resemble-01
     :ARG1 (l / level
         :topic (e / enzyme
@@ -2141,7 +2196,7 @@ pmid_1592_8660.92,"The levels of total ERK were remarkably similar across all ce
             :degree (s / significant)
             :comparison (o / other
                 :ARG1-of (m / more-02
-                    :ARG1 l2)))))",-1.0,-1.0
+                    :ARG1 l2)))))",-1.0,-1.0,,Duplicate node name s in parsing AMR
 pmid_1592_8660.94,"<xref ref-type=""fig"" rid=""fig2"">Figure 2</xref> shows that there is no significant influence of serum on the activity of ERK1/2 in these cell lines, as reported recently by <xref ref-type=""other"" rid=""bib3"">Calipel <i>et al</i> (2003)</xref>.","(s2 / show-01
     :ARG0 (f / figure
         :mod 2)
@@ -2237,7 +2292,11 @@ pmid_1592_8660.94,"<xref ref-type=""fig"" rid=""fig2"">Figure 2</xref> shows tha
         :mod (s3 / significant))
     :ARG2 (r / report-01
         :ARG0 (p / person :name (n3 / name :op1 ""Calipel"" :op2 ""et"" :op3 ""al"") :date (d / date-entity :year 2003))
-        :time (r2 / recent-02)))",-1.0,-1.0
+        :time (r2 / recent-02)))",-1.0,-1.0,,"Error in parsing AMR(s / show-01
+    :ARG0 (f / figure :name (n / name :op1 ""2""))
+    :ARG1 (i / influence-01
+        :ARG1 (a / activity-01
+            :ARG1 (e / ERK1/"
 pmid_1592_8660.97,"In seven of the 19 primary tumours, less than 5% of the tumour cells stained positively for ERK1/2 and nine tumours for phosphorylated ERK1/2.","(a / and
     :location (t / tumor
         :quant 7
@@ -2333,7 +2392,19 @@ pmid_1592_8660.97,"In seven of the 19 primary tumours, less than 5% of the tumou
                             :part-of t3)
                         :manner (p4 / positive)
                         :ARG1 (p5 / phosphorylate-01
-                            :ARG1 e)))))))",-1.0,-1.0
+                            :ARG1 e)))))))",-1.0,-1.0,,"Error in parsing AMR(p / primary-01
+    :ARG1 (t / tumor
+        :quant 19
+        :part (t2 / tumor
+            :quant 7
+            :ARG1-of (l / less-than
+                :ARG2 (p2 / percent
+                    :quant 5))
+            :ARG1-of (s / stain-01
+                :ARG2 (c / cell
+                    :part-of t2)
+                :manner (p3 / positive)
+                :ARG1 (e / ERK1/"
 pmid_1592_8660.98,"Despite the lack of mutations in the <i>RAS</i> and <i>BRAF</i> genes in this set of uveal melanomas, it is noteworthy that we observed phosphorylated (active) ERK1/2 expression in 10 of 19 tumours.","(n5 / note-01
     :ARG1 (o / observe-01
         :ARG0 (w2 / we)
@@ -2458,7 +2529,21 @@ pmid_1592_8660.98,"Despite the lack of mutations in the <i>RAS</i> and <i>BRAF</
                 :quant 19
                 :part (t2 / tumor
                     :quant 10)))
-        :mod (n3 / noteworthy)))",-1.0,-1.0
+        :mod (n3 / noteworthy)))",-1.0,-1.0,,"Error in parsing AMR(d / despite-91
+    :ARG2 (l / lack-01
+        :ARG1 (m / mutation
+            :location (g / gene
+                :name (n / name :op1 ""RAS"")
+                :name (n2 / name :op1 ""BRAF""))
+            :part (s / set
+                :consist-of (m2 / melanoma
+                    :mod (u / uveal)))))
+    :ARG1 (o / observe-01
+        :ARG0 (w / we)
+        :ARG1 (e / express-01
+            :ARG1 (p / phosphorylate-01
+                :ARG1 (a / active)
+                :ARG2 (e2 / ERK1/"
 pmid_1684_6534.10,"Additional changes were seen at the protein level, such as increased expression of c-Myc, heightened phosphorylation of AKT, and decreased activation of MEK1/2 and ERK1/2.","(s / see-01
     :ARG1 (c / change-01
         :example (a3 / and
@@ -2573,7 +2658,18 @@ pmid_1684_6534.10,"Additional changes were seen at the protein level, such as in
             :degree (d / decrease-01))
         :snt4 (a4 / activate-01
             :ARG1 (e2 / ERK1/2)
-            :degree d)))",-1.0,-1.0
+            :degree d)))",-1.0,-1.0,,"Error in parsing AMR(c / change-01
+    :ARG1 (p / protein)
+    :mod (a / additional)
+    :ARG2 (m / multi-sentence
+        :snt1 (e / express-01
+            :ARG1 (c2 / c-Myc)
+            :degree (i / increase-01))
+        :snt2 (p2 / phosphorylate-01
+            :ARG1 (a2 / AKT)
+            :degree (h / heighten-01))
+        :snt3 (a3 / activate-01
+            :ARG1 (m2 / MEK1/"
 pmid_1684_6534.11,"These were correlated with cellular events, as MUC1 siRNA in the MDA-MB-468 line decreased proliferation and invasion, and increased stress-induced apoptosis.","(c3 / correlate-01
     :ARG1 (t / this)
     :ARG1-of (c / cause-01
@@ -2668,7 +2764,7 @@ pmid_1684_6534.11,"These were correlated with cellular events, as MUC1 siRNA in 
             :ARG1 (a / apoptosis
                 :mod (s2 / stress-induced)))))
     :location (l2 / line
-        :name (n2 / name :op1 ""MDA-MB-468"")))",-1.0,-1.0
+        :name (n2 / name :op1 ""MDA-MB-468"")))",-1.0,-1.0,,
 pmid_1684_6534.118,"Three genes whose transcription was changed by less than two-fold are shown, two of which (<i>PDGFB </i>and <i>ITGB1</i>) are listed because they relate closely to genes altered by two-fold (<i>PDGFA </i>and <i>ITGAV</i>).","(s / show-01
     :ARG1 (g / gene
         :quant 3
@@ -2798,7 +2894,7 @@ pmid_1684_6534.118,"Three genes whose transcription was changed by less than two
             :ARG1-of (a / alter-01
                 :degree (t2 / two
                     :unit f)))))
-    :quant (n7 / number :value 2))",-1.0,-1.0
+    :quant (n7 / number :value 2))",-1.0,-1.0,,
 pmid_1684_6534.122,"We examined MEK1 and MEK2 levels by western blot to confirm decreased protein in MUC1 siRNA-treated cells (Figure <xref ref-type=""fig"" rid=""F3"">3a</xref>), and found that not only were total MEK1/2 levels lower in 468.siMUC1 and BT.siMUC1 compared to controls (0.48 and 0.68 relative to siLuc, respectively), but so were the basal amounts of active (phosphorylated) MEK1/2 (pMEK1/2; 0.12 and 0.42 relative to siLuc, respectively).","(a4 / and
     :op1 (e4 / examine-01
         :purpose (c3 / confirm-01
@@ -3039,7 +3135,7 @@ pmid_1684_6534.122,"We examined MEK1 and MEK2 levels by western blot to confirm 
         :mod (p3 / phosphorylate-01))
     :quant (r2 / relative-quantity
         :op1 ""0.12""
-        :op2 ""0.42""))",-1.0,-1.0
+        :op2 ""0.42""))",-1.0,-1.0,,Duplicate node name c2 in parsing AMR
 pmid_1684_6534.125,"Notably, MUC1 siRNA impairs this important oncogenic pathway in MDA-MB-468 cells, as 468.siMUC1 display less pMEK1/2 in response to EGF than do 468.siLuc (Figure <xref ref-type=""fig"" rid=""F3"">3b</xref>).","(i / impede-01
     :ARG0 (e / enzyme
         :name (n / name
@@ -3302,7 +3398,7 @@ pmid_1684_6534.125,"Notably, MUC1 siRNA impairs this important oncogenic pathway
             :ARG2 (e / EGF))
         :mod (n4 / notable))
     :medium (f / figure
-        :name (n5 / name :op1 ""3b"")))",-1.0,-1.0
+        :name (n5 / name :op1 ""3b"")))",-1.0,-1.0,,Duplicate node name n in parsing AMR
 pmid_1684_6534.129,"Thus, it appears that basal pMEK1/2 levels are not greatly affected by Raf-1 overexpression in BT.siMUC1 cells, likely because MEK is regulated primarily by B-Raf under normal growth conditions.","(i / infer-01
     :ARG1 (a2 / appear-02
         :ARG1 (a / affect-01
@@ -3424,7 +3520,7 @@ pmid_1684_6534.129,"Thus, it appears that basal pMEK1/2 levels are not greatly a
             :mod (n / normal)
             :ARG1-of (g3 / grow-01)))
     :concession (l2 / likely)
-    :mode (t / thus))",-1.0,-1.0
+    :mode (t / thus))",-1.0,-1.0,,Duplicate node name n in parsing AMR
 pmid_1684_6534.130,"In contrast, when the cells are stimulated (EGF), increased Raf-1 levels in BT.siMUC1 leads to heightened pMEK1/2 (Figure <xref ref-type=""fig"" rid=""F3"">3b</xref>).","(c2 / contrast-01
     :ARG1-of (d / describe-01
         :ARG0 (f / figure
@@ -3524,7 +3620,12 @@ pmid_1684_6534.130,"In contrast, when the cells are stimulated (EGF), increased 
         :ARG1-of (x / xref
             :ref-type ""fig""
             :rid ""F3""
-            :op1 ""3b"")))",-1.0,-1.0
+            :op1 ""3b"")))",-1.0,-1.0,,"Error in parsing AMR(i / increase-01
+    :ARG1 (l / level
+        :quant (r / Raf-1)
+        :location (b / BT.siMUC1))
+    :ARG2 (h / heighten-01
+        :ARG1 (p / pMEK1/"
 pmid_1901_8267.141,"Next, we examined the prognostic effect of <i>KRAS/BRAF</i> mutations and p-ERK1/2 expression.","(e / examine-01
     :ARG0 (w / we)
     :ARG1 (a / affect-01
@@ -3590,7 +3691,7 @@ pmid_1901_8267.141,"Next, we examined the prognostic effect of <i>KRAS/BRAF</i> 
     :ARG2 (e3 / express-01
         :ARG1 (p2 / protein
             :name (n2 / name :op1 ""p-ERK1/2""))))
-    :time (n3 / next))",-1.0,-1.0
+    :time (n3 / next))",-1.0,-1.0,,
 pmid_1901_8267.148,"Mutational status was correlated with growth inhibition and apoptosis induction by the MEK inhibitor CI-1040 that prevented activation of the downstream target, ERK1/2.","(c / correlate-01
     :ARG1 (s / status
         :mod (g / gene))
@@ -3681,7 +3782,7 @@ pmid_1901_8267.148,"Mutational status was correlated with growth inhibition and 
         :ARG1 (a3 / activate-01
             :ARG1 (t2 / target
                 :mod (d / downstream)
-                :name (n2 / name :op1 ""ERK1/2"")))))",-1.0,-1.0
+                :name (n2 / name :op1 ""ERK1/2"")))))",-1.0,-1.0,,Duplicate node name m in parsing AMR
 pmid_1901_8267.149,"Western blot analysis showed a dose-dependent effect on the expression of active ERK1/2 in ES2 cells, and active ERK1/2 was not detectable 6 h after treating the cells with CI-1040 at a concentration of 5 <i>μ</i><sc>M</sc> (<xref ref-type=""fig"" rid=""fig4"">Figure 4</xref>).","(a5 / and
     :op1 (s / show-01
         :ARG0 (a4 / analyze-01
@@ -3823,7 +3924,14 @@ pmid_1901_8267.149,"Western blot analysis showed a dose-dependent effect on the 
                         :ARG2 (u / unit :name (n3 / name :op1 ""μM""))))))
         :op2 (r / refer-01
             :ARG1 (f / figure
-                :name (n4 / name :op1 ""4"")))))",-1.0,-1.0
+                :name (n4 / name :op1 ""4"")))))",-1.0,-1.0,,"Error in parsing AMR(s / show-01
+    :ARG0 (a / analyze-01
+        :ARG0 (w / western-blot)
+        :ARG1 (e / effect
+            :mod (d / depend-01
+                :ARG1 (d2 / dose))
+            :ARG1-of (e2 / express-01
+                :ARG1 (e3 / ERK1/"
 pmid_1956_8237.9,We identified Src as a kinase that is associated with ERK1/2 activation in UM.,"(i / identify-01
     :ARG0 (w / we)
     :ARG1 (e / enzyme
@@ -3879,7 +3987,13 @@ pmid_1956_8237.9,We identified Src as a kinase that is associated with ERK1/2 ac
                 :op1 (e / ERK1/2)
                 :op2 (a3 / activate-01
                     :ARG1 e))
-            :location (u / UM))))",-1.0,-1.0
+            :location (u / UM))))",-1.0,-1.0,,"Error in parsing AMR(i / identify-01
+    :ARG0 (w / we)
+    :ARG1 (s / Src)
+    :ARG2 (k / kinase
+        :ARG1-of (a / associate-01
+            :ARG2 (a2 / and
+                :op1 (e / ERK1/"
 pmid_1956_8237.10,"However, low Src levels and reduced ERK1/2 activation in metastatic cell lines suggest that proliferation in metastases can become independent of Src and RAS/RAF/MEK/ERK signalling.","(c2 / contrast-01
     :ARG2 (s3 / suggest-01
         :ARG0 (a2 / and
@@ -4036,7 +4150,11 @@ pmid_1956_8237.10,"However, low Src levels and reduced ERK1/2 activation in meta
                                 :op1 (r2 / RAS)
                                 :op2 (r3 / RAF)
                                 :op3 (m3 / MEK)
-                                :op4 (e2 / ERK)))))))))",-1.0,-1.0
+                                :op4 (e2 / ERK)))))))))",-1.0,-1.0,,"Error in parsing AMR(h / however
+    :op1 (a / and
+        :op1 (r / reduce-01
+            :ARG1 (a2 / activate-01
+                :ARG1 (e / ERK1/"
 pmid_1956_8237.93,"<sec-title level=""2"">ERK1/2 activation in UM</sec-title>","(a / activate-01
     :ARG1 (r / reactor
         :name (n / name)
@@ -4061,7 +4179,8 @@ pmid_1956_8237.93,"<sec-title level=""2"">ERK1/2 activation in UM</sec-title>","
     :location (u / UM)
     :medium (t / text
         :mod (s / section
-            :level 2)))",-1.0,-1.0
+            :level 2)))",-1.0,-1.0,,"Error in parsing AMR(a / activate-01
+    :ARG1 (e / ERK1/"
 pmid_1956_8237.96,"UMs displaying activated ERK1/2 as well as phosphorylated HSP27 were most common, whereas signals for phosphorylated ERK1/2 were low in metastasis tissue (MET1-3) and metastatic UM cell lines (OMM1, OMM2.3 and OMM2.5) (<xref ref-type=""fig"" rid=""fig1"">Figure 1</xref>).","(c3 / contrast-01
     :ARG1 (h / have-degree-91
         :ARG1 (a2 / and
@@ -4242,7 +4361,10 @@ pmid_1956_8237.96,"UMs displaying activated ERK1/2 as well as phosphorylated HSP
                 :name (n2 / name :op1 ""OMM1"" :op2 ""OMM2.3"" :op3 ""OMM2.5"")))
         :degree (l2 / low))
     :medium (f / figure
-        :name (n3 / name :op1 ""1"")))",-1.0,-1.0
+        :name (n3 / name :op1 ""1"")))",-1.0,-1.0,,"Error in parsing AMR(d / display-01
+    :ARG0 (u / UM)
+    :ARG1 (a / and
+        :op1 (e / ERK1/"
 pmid_1956_8237.97,"Remarkably, two of the metastatic cell lines (OMM2.3, OMM2.5) are derived from the same patient as cell line Mel270 but contained far less activated ERK1/2.","(r / remarkable-02
     :ARG0 (d / derive-01
         :ARG1 (l2 / line
@@ -4348,7 +4470,17 @@ pmid_1956_8237.97,"Remarkably, two of the metastatic cell lines (OMM2.3, OMM2.5)
             :ARG2 (e / ERK1/2
                 :ARG1-of (a / activate-01)
                 :quant (l / less
-                    :degree (f / far))))))",-1.0,-1.0
+                    :degree (f / far))))))",-1.0,-1.0,,"Error in parsing AMR(r / remarkable-01
+    :ARG1 (d / derive-01
+        :ARG1 (c / cell-line
+            :name (n / name :op1 ""OMM2.3"" :op2 ""OMM2.5"")
+            :mod (m / metastatic))
+        :ARG2 (p / patient
+            :ARG0-of (h / have-03
+                :ARG1 (c2 / cell-line
+                    :name (n2 / name :op1 ""Mel270""))))
+        :ARG1-of (c3 / contain-01
+            :ARG2 (e / ERK1/"
 pmid_1956_8237.99,Reduction of ERK1/2 activation in metastatic cell lines compared with that in primary UM cell lines provides a model to identify the underlying mechanism of ERK1/2 activation in the absence of <i>BRAF</i> and <i>NRAS</i> mutations.,"(p2 / provide-01
     :ARG0 (r / reduce-01
         :ARG1 (a2 / activate-01
@@ -4484,7 +4616,9 @@ pmid_1956_8237.99,Reduction of ERK1/2 activation in metastatic cell lines compar
                             :mod (a4 / absent)
                             :ARG1-of (m4 / mutation-01
                                 :ARG1 (b / BRAF)
-                                :ARG2 (n / NRAS)))))))))",-1.0,-1.0
+                                :ARG2 (n / NRAS)))))))))",-1.0,-1.0,,"Error in parsing AMR(r / reduce-01
+    :ARG1 (a / activate-01
+        :ARG0 (e / ERK1/"
 pmid_1956_8237.109,"We added PP1 and PP2 (10 <i>μ</i><sc>M</sc>) to lysates of primary UM tissue and of a primary UM cell line and measured the inhibitory effect of these Src inhibitors using kinase array (<xref ref-type=""fig"" rid=""fig3"">Figure 3A</xref>).","(a5 / and
     :ARG1-of (d / describe-01
         :ARG0 (f / figure
@@ -4632,7 +4766,7 @@ pmid_1956_8237.109,"We added PP1 and PP2 (10 <i>μ</i><sc>M</sc>) to lysates o
         :instrument (r / refer-01
             :ARG1 (f / figure
                 :name (n5 / name :op1 ""3A""))
-            :mode (x / external))))",-1.0,-1.0
+            :mode (x / external))))",-1.0,-1.0,,
 pmid_1956_8237.112,"The peptide representing FAK1 Y576/Y577 is a genuine substrate for Src, which was not detected in the UM cell line comparison, but phosphorylation was significantly downregulated by PP1 and PP2 treatments.","(s2 / substrate
     :beneficiary (e / enzyme
         :name (n2 / name
@@ -4746,7 +4880,10 @@ pmid_1956_8237.112,"The peptide representing FAK1 Y576/Y577 is a genuine substra
                     :mod (p3 / PP1))
                 :op2 (t2 / treatment
                     :mod (p4 / PP2))))
-        :ARG1-of (c3 / contrast-01)))",-1.0,-1.0
+        :ARG1-of (c3 / contrast-01)))",-1.0,-1.0,,"Error in parsing AMR(p / peptide
+    :mod (r / represent-01
+        :ARG1 (f / FAK1
+            :mod (y / Y576/"
 pmid_1991_9690.11,"There is a high level of ERK1/2 phosphorylation in WM9 cells, indicating an activated Ras-Raf-MEK-ERK1/2 MAPK pathway.","(p / phosphorylate-01
     :ARG0-of (i / indicate-01
         :ARG1 (e2 / enzyme
@@ -4811,7 +4948,11 @@ pmid_1991_9690.11,"There is a high level of ERK1/2 phosphorylation in WM9 cells,
     :condition (i / indicate-01
         :ARG1 (a / activate-01
             :ARG1 (p2 / pathway
-                :name (n2 / name :op1 ""Ras-Raf-MEK-ERK1/2"" :op2 ""MAPK"")))))",-1.0,-1.0
+                :name (n2 / name :op1 ""Ras-Raf-MEK-ERK1/2"" :op2 ""MAPK"")))))",-1.0,-1.0,,"Error in parsing AMR(e / exist-01
+    :ARG1 (l / level
+        :degree (h / high)
+        :topic (p / phosphorylate-01
+            :ARG1 (e2 / ERK1/"
 pmid_1991_9690.61,"Fig. <xref ref-type=""fig"" rid=""F2"">2B</xref> shows that human melanoma cell lines express both full-length and the 785 splice variant HIF-1α mRNA at a level that appeared to be higher than normal human melanocytes.","(s / show-01
     :ARG0 (f / figure)
     :ARG1 (e / express-01
@@ -4946,7 +5087,7 @@ pmid_1991_9690.61,"Fig. <xref ref-type=""fig"" rid=""F2"">2B</xref> shows that h
                         :mod f2)
                     :ARG1-of (t2 / than-01
                         :ARG2 e2))
-                :op2 e3))))",-1.0,-1.0
+                :op2 e3))))",-1.0,-1.0,,Duplicate node name s in parsing AMR
 pmid_1991_9690.82,"Hypoxia independent expression of HIF-1α is thought to be regulated by growth signaling pathways [<xref ref-type=""bibr"" rid=""B18"">18</xref>,<xref ref-type=""bibr"" rid=""B19"">19</xref>] and the majority of melanomas have constitutively active ERK1/2 MAPK pathway due to BRAF or N-Ras mutations [<xref ref-type=""bibr"" rid=""B14"">14</xref>,<xref ref-type=""bibr"" rid=""B15"">15</xref>].","(a2 / and
     :op1 (t / think-01
         :ARG1 (r / regulate-01
@@ -5094,7 +5235,23 @@ pmid_1991_9690.82,"Hypoxia independent expression of HIF-1α is thought to be re
                     :ARG2 (m3 / mutation
                         :ARG1 (o / or
                             :op1 (b / BRAF)
-                            :op2 (n / N-Ras)))))))",-1.0,-1.0
+                            :op2 (n / N-Ras)))))))",-1.0,-1.0,,"Error in parsing AMR(t / think-01
+    :ARG1 (r / regulate-01
+        :ARG1 (e / express-01
+            :ARG0 (h / HIF-1α)
+            :condition (i / independent
+                :ARG1 (h2 / hypoxia)))
+        :ARG2 (p / pathway
+            :mod (g / grow-01)
+            :mod (s / signal-01)))
+    :source (p2 / person
+        :quant (m / majority)
+        :ARG0-of (h3 / have-03
+            :ARG1 (p3 / pathway
+                :mod (a / active-04
+                    :degree (c / constant))
+                :mod (m2 / MAPK)
+                :mod (e2 / ERK1/"
 pmid_1991_9690.83,"Therefore, we determined whether HIF-1α expression in human metastatic melanoma WM9 cells was dependent on activation of ERK1/2 MAPK signaling.","(c / cause-01
     :ARG1 (d2 / determine-01
         :ARG0 (w / we)
@@ -5185,7 +5342,20 @@ pmid_1991_9690.83,"Therefore, we determined whether HIF-1α expression in human 
             :ARG1 (s / signal-01
                 :mod (m3 / MAPK)
                 :mod (e2 / ERK1/2))))
-    :condition (t / therefore))",-1.0,-1.0
+    :condition (t / therefore))",-1.0,-1.0,,"Error in parsing AMR(d / determine-01
+    :ARG0 (w / we)
+    :ARG1 (d2 / depend-01
+        :ARG1 (e / express-01
+            :ARG0 (p / protein :name ""HIF-1α"")
+            :ARG1 (c / cell
+                :mod (m / melanoma
+                    :mod (m2 / metastatic)
+                    :mod (h / human))
+                :name ""WM9""))
+        :ARG2 (a / activate-01
+            :ARG1 (s / signal-01
+                :mod (m3 / MAPK)
+                :mod (e2 / ERK1/"
 pmid_1991_9690.85,"Treatment of WM9 cells with 30 μM U0126, a selective U0126 MEK inhibitor, decreased ERK1/2 phosphorylation and led to a time-dependent decrease in HIF-1α protein expression (Fig. <xref ref-type=""fig"" rid=""F6"">6A</xref>).","(a / and
     :ARG1-of (d4 / describe-01
         :ARG0 (f / figure
@@ -5311,7 +5481,7 @@ pmid_1991_9690.85,"Treatment of WM9 cells with 30 μM U0126, a selective U0126 M
                         :mod (d3 / depend-01)))
                 :mod (t3 / time)))))
     :medium (f / figure
-        :name (n8 / name :op1 ""6A"")))",-1.0,-1.0
+        :name (n8 / name :op1 ""6A"")))",-1.0,-1.0,,
 pmid_2000_3375.133,"<sec-title level=""2"">Aurora-A overexpression increases phosphorylation status of MEK/ERK and AKT as well as the activity of RalA in the Ras<sup>V12 </sup>transformants</sec-title>","(i / increase-01
     :li 2
     :ARG0 (e / engineer-01
@@ -5399,7 +5569,12 @@ pmid_2000_3375.133,"<sec-title level=""2"">Aurora-A overexpression increases pho
                 :mod (r2 / Ras^V12))))
     :medium (t2 / text
         :mod (t3 / title
-            :level 2)))",-1.0,-1.0
+            :level 2)))",-1.0,-1.0,,"Error in parsing AMR(o / overexpress-01
+    :ARG0 (a / aurora-A)
+    :ARG1 (i / increase-01
+        :ARG1 (p / phosphorylate-01
+            :ARG1 (s / status
+                :mod (m / MEK/"
 pmid_2000_3375.152,"Our results confirmed that wild-type-Aurora-A enhance Ras downstream signaling pathways including MEK/ERK, AKT and RalA.","(c / confirm-01
     :ARG0 (t / thing
         :ARG2-of (r / result-01
@@ -5500,7 +5675,17 @@ pmid_2000_3375.152,"Our results confirmed that wild-type-Aurora-A enhance Ras do
                 :ARG1 (r2 / Ras))
             :include (m / MEK/ERK)
             :include (a2 / AKT)
-            :include (r3 / RalA))))",-1.0,-1.0
+            :include (r3 / RalA))))",-1.0,-1.0,,"Error in parsing AMR(c / confirm-01
+    :ARG0 (r / result
+        :poss (w / we))
+    :ARG1 (e / enhance-01
+        :ARG0 (a / Aurora-A
+            :mod (w2 / wild)
+            :mod (t / type))
+        :ARG1 (p / pathway
+            :mod (s / signal-01
+                :ARG1 (r2 / Ras))
+            :include (m / MEK/"
 pmid_2000_3375.154,"The involvement of MEK/ERK, PI3K/AKT and RalGDS/RalA signaling pathways in Aurora-A-related cell aggregation (Fig. <xref ref-type=""fig"" rid=""F2"">2B</xref>, WT + IPTG) was clarified by treatment of the cells with the following inhibitors: FTI-277, a farnesylation inhibitor of Ras; PD-98059, the inhibitor of MEK kinase and LY-294002, the inhibitor of PI3K kinase and RalASa94A, a mutant of Ral.","(c3 / clarify-10
     :ARG0 (t2 / treat-04
         :ARG1 (c2 / cell)
@@ -5726,7 +5911,7 @@ pmid_2000_3375.154,"The involvement of MEK/ERK, PI3K/AKT and RalGDS/RalA signali
                             :ARG0 i6
                             :ARG1 (k2 / kinase :name (n11 / name :op1 ""PI3K""))))
                     :op4 (m8 / mutant :name (n12 / name :op1 ""RalASa94A"")
-                        :mod (m9 / molecule :name (n13 / name :op1 ""Ral""))))))))",-1.0,-1.0
+                        :mod (m9 / molecule :name (n13 / name :op1 ""Ral""))))))))",-1.0,-1.0,,Duplicate node name c in parsing AMR
 pmid_2000_3375.156,"PD-98059 decreased the phosphorylation of ERK1/2 (p-ERK1/2) but had no effect on other signaling pathways (Figure <xref ref-type=""fig"" rid=""F4"">4A</xref>, lanes 4 and 5).","(c / contrast-01
     :ARG1 (d / decrease-01
         :ARG1 (p / phosphorylate-01
@@ -5809,7 +5994,7 @@ pmid_2000_3375.156,"PD-98059 decreased the phosphorylation of ERK1/2 (p-ERK1/2) 
         :location (l / lane
             :op1 ""4""
             :op2 ""5""))
-    :ARG1-of (c2 / contrast-01))",-1.0,-1.0
+    :ARG1-of (c2 / contrast-01))",-1.0,-1.0,,
 pmid_2000_3375.158,"In summary, in WT cells Aurora-A increases the expression of p-ERK1/2 in a Ras dependent manner.","(i / increase-01
     :ARG1 (e2 / express-03
         :ARG1 (e / enzyme
@@ -5877,4 +6062,8 @@ pmid_2000_3375.158,"In summary, in WT cells Aurora-A increases the expression of
             :location (c / cell
                 :mod (w / wild-type)))
         :manner (d / depend-01
-            :ARG1 (r / Ras))))",-1.0,-1.0
+            :ARG1 (r / Ras))))",-1.0,-1.0,,"Error in parsing AMR(s / summarize-01
+    :ARG1 (i / increase-01
+        :ARG0 (a / aurora-A)
+        :ARG1 (e / express-01
+            :ARG1 (p / p-ERK1/"

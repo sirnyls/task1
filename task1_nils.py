@@ -2,11 +2,11 @@ import warnings
 import smatch_modified
 import pandas as pd
 
-def calc_with_warnings(true_amr, pred_amr, id):
+def calc_with_warnings(true_amr, pred_amr, current_id):
     try:
         # redirect warnings 
         with warnings.catch_warnings(record=True) as w:
-            best_match_num, test_triple_num, gold_triple_num, warning_message = smatch_modified.get_amr_match(true_amr, pred_amr, id)
+            best_match_num, test_triple_num, gold_triple_num, warning_message = smatch_modified.get_amr_match(true_amr, pred_amr, current_id)
             if w:
                 warning_message.append(str(w[-1].message))
                 
@@ -33,12 +33,8 @@ for amr_pair in data_gpt4:
     pred_amr_gpt4 = amr_pair['gpt4_0613_amr']
     id_gpt4 = amr_pair['id']
 
-
-warning_message = []
-best_match_num, test_triple_num, gold_triple_num, warning_message = calc_with_warnings(true_amr_gpt4, pred_amr_gpt4, id)
-
-
-print("FINISH:", warning_message)
+    warning_message = []
+    best_match_num, test_triple_num, gold_triple_num, warning_message = calc_with_warnings(true_amr_gpt4, pred_amr_gpt4, id_gpt4)
 
 
 
